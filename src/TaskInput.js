@@ -40,6 +40,7 @@ const TaskInput = ({ task }) => {
 
     return (
         <>
+            <input type="button" value="drag"/>        
             <input type="checkbox" name="name" id="name" onClick={onMark}/>
             <input value={name} onChange={e => {setName(e.target.value)}}/>
             <button onClick={onUpdate} >Atualizar</button>
