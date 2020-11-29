@@ -4,6 +4,7 @@ import {db} from './firebase';
 import TaskInput from './TaskInput';
 import DoneTaskInput from './DoneTaskInput';
 import {v4 as uuidv4} from 'uuid';
+import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd'
 
 function App() {
   const [tasks, setTasks] = React.useState([])
@@ -41,12 +42,23 @@ function App() {
   }
 
   return (
+    <DragDropContext>
     <ul>
-      {tasks.map(task => (
-        <li key={task.id}>
-          <TaskInput task={task}/>
-        </li>
-      ))}
+      <Droppable droppableId="todos" >
+      {(provided) => (
+        {tasks.map((task, index) => (
+          <Draggable key={task.id} index={index} draggableId={task.id}>
+          <li ref={provided.innerRef} 
+          {...provided.draggableProps} 
+          {...provided.dragHandleProps}> className="todos" 
+          {...provided.droppableProps} 
+          ref={provided.innerRef}
+            <TaskInput task={task}/>
+          </li>
+          </Draggable>
+        ))}
+      )}
+      </Droppable>
       <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
       <button onClick={onCreate}>Adicionar novo item</button>
       {doneTasks.map(task => (
@@ -55,6 +67,7 @@ function App() {
         </li>
       ))}
     </ul>
+    </DragDropContext>
   );
 }
 
