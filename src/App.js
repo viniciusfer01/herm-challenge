@@ -3,6 +3,7 @@ import './App.css';
 import {db} from './firebase';
 import TaskInput from './TaskInput';
 import DoneTaskInput from './DoneTaskInput';
+import Menu from './Menu';
 import {v4 as uuidv4} from 'uuid';
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
   }
 
   return (
+    <>
+    <Menu />
     <ul>
       {tasks.map(task => (
         <li key={task.id}>
@@ -55,6 +58,7 @@ function App() {
         </li>
       ))}
     </ul>
+    </>
   );
 }
 
