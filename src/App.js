@@ -3,6 +3,7 @@ import './App.css';
 import {db} from './firebase';
 import TaskInput from './TaskInput';
 import DoneTaskInput from './DoneTaskInput';
+import './index.css';
 import Menu from './Menu';
 import {v4 as uuidv4} from 'uuid';
 
