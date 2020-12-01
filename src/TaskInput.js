@@ -4,6 +4,7 @@ import {db} from './firebase';
 
 const TaskInput = ({ task }) => {
     const [name, setName] = React.useState(task.name);
+    
 
     const onUpdate = () => {
         db.collection("todos").doc(task.id).set({...task, name})
@@ -42,7 +43,9 @@ const TaskInput = ({ task }) => {
         <>
             <button>::</button>
             <input type="checkbox" name="name" id="name" onClick={onMark}/>
-            <input type='text' value={name} onChange={e => {setName(e.target.value)} }/>
+            <input type='text' value={name}
+                onChange={e => {setName(e.target.value)}} 
+            />
             <button onClick={onDelete} >✖️</button>
             <button onClick={onUpdate} >💾</button>
 
