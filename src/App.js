@@ -55,9 +55,12 @@ function App() {
             <TaskInput task={task}/>
           </li>
         ))}
-        
-        <button onClick={onCreate}>➕</button>
-        <input className='textInput' type="text" placeholder='Adicionar novo item' value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
+        <li>
+          <button onClick={onCreate}>➕</button>
+          <input className='textInput' 
+          type="text" placeholder='Adicionar novo item' 
+          value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
+        </li>
         <li className="done">✔️ Itens concluídos</li>
         {doneTasks.map(task => (
           <li key={task.id} className="todoItem">

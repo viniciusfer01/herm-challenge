@@ -31,8 +31,12 @@
 .menuItem {
   flex-grow: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 12px;
+}
+
+.menuItem img ,.lastMenuItem img{
+  margin: 0 1vw;
 }
 
 .menuItem img, .lastMenuItem img {
@@ -48,7 +52,6 @@
   display: flex;
   align-items: flex-end;
   padding-bottom: 12px;
-  padding-left: 20px;
 }
 
 img {
@@ -101,6 +104,10 @@ h1 {
   align-content: flex-start;
 }
 
+#todo ul li {
+  margin: 2vh 0;
+}
+
 input, button, li.done, input::placeholder {
   border: none;
   background-color: transparent;
@@ -134,7 +141,72 @@ li.done {
   text-decoration: line-through; 
 }
 
-#menu li {
+#info {
+  display: none;
+}
+
+#menu li :nth-child(n){
   align-content: stretch;
 }
 
+.todoItem input{
+  margin: 0 1vw;
+}
+
+input[type=text] {
+  width: 65%;
+  margin: 0;
+}
+
+@media (max-width: 1600px)
+{
+  #content {
+    display: block;
+    min-height: 100vh;
+    width: 100vw;
+  } 
+
+  #menu {
+    min-width: 100vw;
+    min-height: 23vh;
+    display: flex;
+    flex-direction: row;
+    border-right-color: teal;
+    font-family: seguisb, serif;
+    color: #818181bb;
+    font-size: 1.8em;
+    box-shadow: 5px 5px 4px #dadadada;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menuItem, .lastMenuItem {
+    display: none;
+  }
+
+  #logo {
+    max-width: 40%;
+  }
+
+  #info {
+    display: inline-block;
+    margin: 0 12vw;
+  }
+
+  h1 {
+    padding: 8vh 0;
+    font-family: seguisb, serif;
+    color: rgba(100, 148, 237, 0.897);
+    font-size: 3.2em;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  #todo ul {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+}

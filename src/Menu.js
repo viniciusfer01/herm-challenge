@@ -16,6 +16,7 @@ const Menu = () => {
             <li className='menuItem'><img src={history} alt=""/>Histórico</li>
             <li className='menuItem'><img src={config} alt=""/>Configurações</li>
             <li className='lastMenuItem'><img src={logout} alt=""/>Sair</li>
+            <li id='info'>ℹ️</li>
         </ul>
     );
 };
