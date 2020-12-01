@@ -40,26 +40,33 @@ function App() {
     .catch(function(error) {
       console.error("Error adding document: ", error);
     });
+
+    
   }
 
   return (
-    <>
-    <Menu />
-    <ul>
-      {tasks.map(task => (
-        <li key={task.id}>
-          <TaskInput task={task}/>
-        </li>
-      ))}
-      <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
-      <button onClick={onCreate}>Adicionar novo item</button>
-      {doneTasks.map(task => (
-        <li key={task.id}>
-          <DoneTaskInput className='doneInput' task={task}/>
-        </li>
-      ))}
-    </ul>
-    </>
+    <div id="content">
+    <Menu id ="menu"/>
+    <div id="todo">
+      <ul>
+        <h1>Sua lista de compras</h1>
+        {tasks.map(task => (
+          <li key={task.id} className="todoItem">
+            <TaskInput task={task}/>
+          </li>
+        ))}
+        
+        <button onClick={onCreate}>➕</button>
+        <input className='textInput' type="text" placeholder='Adicionar novo item' value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
+        <li className="done">✔️ Itens concluídos</li>
+        {doneTasks.map(task => (
+          <li key={task.id} className="todoItem">
+            <DoneTaskInput className='doneInput' task={task}/>
+          </li>
+        ))}
+      </ul>
+    </div>
+    </div>
   );
 }
 

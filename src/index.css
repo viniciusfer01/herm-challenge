@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'segoeuib';
+  src: local('segoeuib'), url('./Assets/segoeuib.ttf') format('truetype');
+
+  font-family: 'segoeui';
+  src: local('segoeui'), url('./Assets/segoeui.ttf') format('truetype');
+
+  font-family: 'seguisb';
+  src: local('seguisb'), url('./Assets/seguisb.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +16,125 @@
 }
 
 #logo {
-  width: 150px;
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#logo img{
+  
+  width: 60%;
+}
+
+.menuItem {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItem img, .lastMenuItem img {
+  width: 12%;
+}
+
+#firstItem{
+  color: rgba(100, 148, 237, 0.897);
+}
+
+.lastMenuItem {
+  flex-grow: 9;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 12px;
+  padding-left: 20px;
 }
 
 img {
   width: 25px;
+}
+
+h1 {
+  padding: 8vh 0;
+  font-family: seguisb, serif;
+  color: rgba(100, 148, 237, 0.897);
+  font-size: 3.2em;
+  font-weight: 900;
+  text-align: center;
+  flex-grow: 2;
+}
+
+#content {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+#menu {
+  max-width: 17%;
+  display: flex;
+  flex-direction: column;
+  border-right-color: teal;
+  flex-grow: 1;
+  font-family: seguisb, serif;
+  color: #818181bb;
+  align-items: stretch;
+  font-size: 1.8em;
+  box-shadow: 5px 5px 4px #dadadada
+}
+
+#todo {
+  flex-grow: 5;
+  font-family: segoeui, serif;
+  color: #818181;
+  font-family: segoeui, serif;
+  color: #818181;
+}
+
+#todo ul {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+input, button, li.done, input::placeholder {
+  border: none;
+  background-color: transparent;
+  font-family: segoeui, serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: #818181bd;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  
+}
+
+.textInput {
+  margin-bottom: 25px;
+}
+
+li.done {
+  margin-top: 25px;
+  border-top: 1px solid #333;
+  padding-top: 25px;
+  
+}
+
+.checked {
+  text-decoration: line-through; 
+}
+
+#menu li {
+  align-content: stretch;
 }
 
