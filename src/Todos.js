@@ -57,7 +57,7 @@ const Menu = () => {
                 type="text" placeholder='Adicionar novo item' 
                 value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
                 </li>
-                <li className="done">✔️ Items concluídos</li>
+                <li className="done">✔️ Itens concluídos</li>
                 {doneTasks.map(task => (
                 <li key={task.id} className="todoItem">
                     <DoneTaskInput className='doneInput' task={task}/>
