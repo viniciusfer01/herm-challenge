@@ -3,6 +3,7 @@
 # Xoping
 This app is a todo list that saves its todos in Google's Firestore database.
 
+[Challenge link](https://gitlab.com/victor_am/desafio-de-estagio-herm/)
 ### Tools used
 
 - React
