@@ -19,7 +19,7 @@ Access [This Link](https://hermchallenge.vercel.app/) to test the app deployed i
 
 You can add todos by clicking in 'Adicionar novo item', filling out the name of your todo and clicking the '+' icon next to it. 
 To delete a todo, you must click the 'X' icon next to it. To update a todo, you must select a todo, type your changes and click the floppy disk next to it.
-Finally, when you finish your todos, check its checkbox to move it to the 'Items concluídos' section.
+Finally, when you finish your todos, check its checkbox to move it to the 'Itens concluídos' section.
 
 ### How to run it?
 
