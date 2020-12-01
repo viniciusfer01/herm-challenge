@@ -4,7 +4,6 @@ import {db} from './firebase';
 
 const TaskInput = ({ task }) => {
     const [name, setName] = React.useState(task.name);
-    
 
     const onUpdate = () => {
         db.collection("todos").doc(task.id).set({...task, name})
