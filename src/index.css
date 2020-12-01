@@ -209,4 +209,25 @@ input[type=text] {
     flex-direction: column;
     align-content: flex-start;
   }
+
+  input, button, li.done, input::placeholder {
+    border: none;
+    background-color: transparent;
+    font-family: seguisb, serif;
+    font-weight: 500;
+    font-size: 27px;
+    color: #818181bd;
+  }
+  
+  #todo ul li {
+    margin: 2vh 5vw;
+    display: flex;
+    align-items: center;
+  }
+
+  input[type=text] {
+    width: 80%;
+    margin: 0;
+  }
+
 }

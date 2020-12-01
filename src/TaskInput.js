@@ -43,8 +43,8 @@ const TaskInput = ({ task }) => {
             <button>::</button>
             <input type="checkbox" name="name" id="name" onClick={onMark}/>
             <input type='text' value={name} onChange={e => {setName(e.target.value)} }/>
-            <button onClick={onUpdate} >Atualizar</button>
             <button onClick={onDelete} >✖️</button>
+            <button onClick={onUpdate} >💾</button>
 
         </>
     );
